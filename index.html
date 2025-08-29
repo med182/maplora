@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base target="_top">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Map LoRa</title>
+  
+  <!-- Icône de l’onglet du navigateur -->
+  <link rel="shortcut icon" type="image/x-icon" href="icone-xlconcept.ico" />
+  
+  <!-- Feuille de styles personnalisée -->
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+  // active le mode "embedded" si l'URL finit par ?embed=1
+  if (new URLSearchParams(location.search).get('embed') === '1') {
+    document.documentElement.classList.add('embedded');
+  }
+</script>
+
+  <!-- Feuille de styles de Leaflet (bibliothèque cartographique) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+        crossorigin=""/>
+
+  <!-- Chargement des icônes Font Awesome -->
+  <script src="https://kit.fontawesome.com/1cf31328a0.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet-image/leaflet-image.js"></script>
+
+
+  <!-- Script de la bibliothèque Leaflet (affichage de cartes interactives) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+          crossorigin=""></script>
+
+</head>
+
+<body>
+  <!-- En-tête de la page : espace réservé pour des boutons de menu -->
+ 
+
+  <!-- Conteneur de la carte Leaflet -->
+  <div id="map"></div>
+
+  <!-- Script principal contenant la logique d’affichage de la carte -->
+  <script src="laurenne_map.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#header {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+#map {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+.fa-icon-wrapper {
+  background: none;
+  border: none;
+}
+
+.leaflet-control .iot-reload{
+  padding:6px 10px;
+  border:1px solid #999;
+  background:#fff;
+  cursor:pointer;
+  font: 14px/1 Arial, sans-serif;
+}
+.leaflet-control .iot-reload:hover{ background:#f3f3f3; }
+
+/* mode embarqué (?embed=1) : pas de bandeau, pas d'overflow, 100% de l'iframe */
+html.embedded #header { display:none !important; }
+html.embedded body    { overflow:hidden; }
+html.embedded #map    { height:100%; }
+
+/* style des boutons Leaflet custom */
+.leaflet-control .iot-btn{
+  width:28px;height:28px;border:0;border-radius:4px;
+  background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.3);
+  cursor:pointer;line-height:28px;text-align:center;
+}
+.leaflet-control .iot-btn i{ pointer-events:none; }
+
+/* Impression : on enlève l’entête éventuel et on fait occuper tout l’écran à la carte */
+@media print{
+  #header{ display:none !important; }
+  .leaflet-control-container{ display:none !important; }
+  #map{ height:100vh !important; }
+}
+
+
+
+
+
